@@ -50,13 +50,13 @@ public:
   void draw()
   {
 
-    // frame = floor(frame + dt() * FPS) % DURATION;
-
     renderer.beginShader("billboard-animated");
     renderer.texture("image", "explosion");
 
     // 30 fps => each frame 1/30 long, e.g. when time = 1s, we play frame 30
-    frame = 0;
+    f_frame += dt() * FPS;
+    frame = int(floor(f_frame)) % (numRows * numCols);
+
     renderer.setUniform("Frame", frame);
     renderer.setUniform("Rows", numRows);
     renderer.setUniform("Cols", numCols);
@@ -75,6 +75,7 @@ protected:
   vec3 lookPos = vec3(0, 0, 0);
   vec3 up = vec3(0, 1, 0);
   int frame = 0;
+  float f_frame = 0.0f;
   int FPS = 30;
   int DURATION = 1;
   int numRows = 8;
