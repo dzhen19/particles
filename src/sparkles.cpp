@@ -34,6 +34,7 @@ public:
 
   void createConfetti(int size)
   {
+    
     renderer.loadTexture("particle", "../textures/particle.png", 0);
     for (int i = 0; i < size; i++)
     {
