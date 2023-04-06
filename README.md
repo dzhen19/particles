@@ -2,7 +2,27 @@
 
 Implements particle demos
 
-TODO: Add a representative image for your project here
+<img width="925" alt="Screen Shot 2023-04-06 at 3 17 49 PM" src="https://user-images.githubusercontent.com/55254786/230474364-d4172b75-b650-42aa-8a77-6e1405e12bc0.png">
+
+## Demo of basic features
+
+Basic features: 
+- sparkel-trail: trail of sparkles follows a revolving sprite
+- explosion: one single explosion sprite is animated 
+- billboard-axis: textured quad of a tree will face camera upon rotation. 
+
+## Unique Particle System: Cannabilistic Cellular Automata 
+
+DEMO VIDEO: https://www.kapwing.com/videos/642e3c66bac9230018d7d7a0
+
+A cellular automaton (CA) is a collection of cells such that each cell changes state as a function of time, according to a defined set of rules driven by the states of neighboring cells. This demo uses the agl library to simulate cellular automata that can cannabilize and grow (similar to agar.io). 
+
+Rules: 
+1. When particles hit the border of the screen, they will go the other way. 
+2. When two particles are fairly close to one another, the bigger particle will "pull" the smaller particle in. 
+3. When two particles are very close to one another, the bigger particle will absorb the smaller particle and gain size proportional to the smaller particle's size. 
+4. When there is only one particle remaining, that particle will burst into smaller particles. 
+
 
 ## How to build
 
@@ -46,12 +66,3 @@ particles/build $ ../bin/sparkles
 particles/build $ ../bin/sparkle-trail
 particles/build $ ../bin/explosion
 ```
-
-## Demo of basic features
-
-TODO: Document the main demos your viewer (shaders + models)
-
-## Unique features 
-
-TODO: Show the unique features you made
-
