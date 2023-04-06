@@ -51,7 +51,7 @@ public:
         {
             initParticle(&mParticles[i]);
             vec3 _newpos = particleToRecyle.pos + vec3(cos(i), sin(i), 0) * particleToRecyle.size * 1.5f;
-            mParticles[i].vel = -(particleToRecyle.pos - _newpos) * 2;
+            mParticles[i].vel = -(particleToRecyle.pos - _newpos) * 2.0f;
 
             mParticles[i].pos = vec3(std::min(std::max(_newpos.x, -.9f), .9f),
                                      std::min(std::max(_newpos.y, -.9f), .9f),
