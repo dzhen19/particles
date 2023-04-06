@@ -28,7 +28,7 @@ public:
 
   void setup()
   {
-    setWindowSize(1000, 1000);
+    setWindowSize(500, 500);
     createConfetti(1);
     renderer.setDepthTest(false);
     renderer.blendMode(agl::ADD);
@@ -100,6 +100,12 @@ public:
 
   void mouseMotion(int x, int y, int dx, int dy)
   {
+    // float fx = (x / width()) * 2 - 1;
+    // float fy = 1 - (y / height());
+    // // std::cout << x << " w: " << width() << " " << y << " h: " << height() << std::endl;
+    // std::cout << fx << " " << fy << std::endl;
+    // // position = vec3(fx, fy, 0);
+    // position = vec3(2, 2, 0);
   }
 
   void mouseDown(int button, int mods)
